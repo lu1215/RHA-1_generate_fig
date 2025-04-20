@@ -1,0 +1,83 @@
+#============================================
+General:
+  # Determine the backgroud style of figure.
+  # Check the link below for more details.
+  # https://seaborn.pydata.org/archive/0.9/tutorial/aesthetics.html#aesthetics-tutorial
+  # eg. darkgrid, whitegrid, dark, white, ticks
+  style: darkgrid
+
+  # Determine the color palette of figure.
+  # Check the link below for more details.
+  # https://seaborn.pydata.org/archive/0.9/tutorial/color_palettes.html#palette-tutorial
+  # eg. coolwarm, deep, hls, Greys
+  color: coolwarm
+
+  # Determine the format of figure.
+  # eg. png, svg
+  fig_format: png
+
+  # Merge all figures in "multi-data to multi-filter".
+  merge: False
+
+  # If it's "multi-data to multi-filter", determine which field should be set separate.
+  # eg. data, filter
+  segmentation: data
+
+#============================================
+Box_Plot:
+  # Determine the color palette of figure.
+  color: coolwarm
+
+  # Add mean and median to x-ticks.
+  detail: True
+
+  # Determine the scale of y-axis.
+  # eg. normal, log2, log10
+  scale: log10
+
+  # Determine which testing method to use.
+  # eg. None, U-test, T-test
+  test: U-test
+
+  # Determine the representation method of the test.
+  # Check the link below for more details.
+  # https://github.com/webermarcolivier/statannot
+  # eg. simple, full, star
+  test_format: simple
+
+#============================================
+Line_Plot:
+  # Determine the color palette of figure.
+  color: deep
+
+  # Determine the xlabel of figure.
+  # eg. region(%), nt
+  xlabel: None
+
+  # Determine the positions of vertical line in a format of list.
+  # eg. [0,100,...]
+  vertical_line: None
+
+#============================================
+Scatter_Plot:
+  # Determine the color palette of figure.
+  color: deep
+
+  # Determine the scale of y-axis.
+  # eg. normal, log2, log10
+  scale: log2
+
+  # Determine which condition should be set as x-axis.
+  # eg. 1, 2
+  x_axis: 1
+
+  # BCV is the coefficient of variation with which the true abundance of the gene varies between replicates. 
+  # Check the document (2.9 and 2.12) below for more details.
+  # https://bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf
+  # eg. None, or 0.1 for model organisms
+  BCV: None
+
+  # Add values which not in filters
+  show_others: False
+
+#============================================

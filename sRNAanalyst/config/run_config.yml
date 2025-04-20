@@ -1,0 +1,67 @@
+#============================================
+# Density Analysis
+Density:
+  run: False
+  data:
+  columns:
+  reference:
+  csv_path:
+#============================================
+# Metagene Analysis
+Metagene:
+  run: False
+  data:
+  reference:
+  csv_path:
+#============================================
+# Head/Tail Analysis
+Boundary:
+  run: False
+  data:
+  columns: 
+  limit:
+  reference:
+  csv_path:
+#============================================
+# Start/Stop Codon Analysis
+Codon:
+  run: False
+  data:
+  columns: 
+  limit:
+  reference:
+  csv_path:
+#============================================
+# Fold Change Analysis
+Fold_Change:
+  run: False
+  data:
+  columns:
+  reference:
+  csv_path:
+#============================================
+# Scatter Analysis
+Scatter:
+  run: False
+  data:
+  columns:
+  reference:
+  csv_path:
+#============================================
+# User Defined "Region Analysis"
+Region:
+  run: False
+  data:
+  columns:
+  reference:
+  csv_path:
+#============================================
+# User Defined "Position Analysis"
+Position:
+  run: False
+  data:
+  columns:
+  limit:
+  reference:
+  csv_path:
+#============================================

@@ -1,0 +1,67 @@
+#============================================
+# Density Analysis
+Density:
+  plot: False
+  fig_path:
+  title:
+  data:
+  filter:
+  columns:
+#============================================
+# Metagene Analysis
+Metagene:
+  plot: False
+  fig_path:
+  title:
+  data:
+  filter:
+#============================================
+# Head/Tail Analysis
+Head:
+  plot: False
+  fig_path:
+  title:
+  data:
+  filter:
+
+Tail:
+  plot: False
+  fig_path:
+  title:
+  data:
+  filter:
+#============================================
+# Start/Stop Codon Analysis
+Start_Codon:
+  plot: False
+  fig_path:
+  title:
+  data:
+  filter:
+
+Stop_Codon:
+  plot: False
+  fig_path:
+  title:
+  data:
+  filter:
+#============================================
+# Fold Change Analysis
+Fold_Change:
+  plot: False
+  fig_path:
+  title:
+  data: # pairing the "control group" and the "experimental group" in sequence
+  filter:
+  columns:
+  delete_zero:
+#============================================
+# Scatter Analysis
+Scatter:
+  plot: False
+  fig_path:
+  title:
+  data: # pairing the "control group" and the "experimental group" in sequence
+  filter:
+  columns:
+#============================================

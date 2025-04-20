@@ -1,0 +1,95 @@
+BASE_DIR: /media/disk1/shangyi/RHA-1_pipeline/sRNAanalyst/example
+Density:
+  columns:
+  - UTR5
+  - CDS
+  - UTR3
+  data:
+  - name: WAGO1_IP_WT
+  - name: WAGO1_IP_PRG1_MUT
+  fig_path: output/analyze/fig/
+  filter:
+  - name: WAGO-1_target
+  - name: CSR-1_target
+  plot: false
+  title: 22G-RNA Density Distribution
+Fold_Change:
+  columns:
+  - UTR5
+  - CDS
+  - UTR3
+  data:
+  - name: WAGO1_IP_WT
+    path: output/analyze/region/WAGO1_IP_WT_region_UTR5-CDS-UTR3.csv
+  - name: WAGO1_IP_PRG1_MUT
+    path: output/analyze/region/WAGO1_IP_PRG1_MUT_region_UTR5-CDS-UTR3.csv
+  delete_zero: true
+  fig_path: output/analyze/fig/
+  filter:
+  - name: WAGO-1_target
+  - name: CSR-1_target
+  plot: false
+  title: 22G-RNA Fold Change
+Head:
+  data:
+  - name: WAGO1_IP_WT
+  - name: WAGO1_IP_PRG1_MUT
+  fig_path: output/analyze/fig/
+  filter:
+  - name: WAGO-1_target
+  - name: CSR-1_target
+  plot: false
+  title: 22G-RNA Head Distribution
+Metagene:
+  data:
+  - name: CSR-1_IP
+  - name: CSR-1_IP_rha-1_MUT
+  fig_path: output/analyze/fig/
+  filter:
+  - name: CSR-1_target
+  plot: false
+  title: 22G-RNA Metagene Distribution
+Scatter:
+  columns:
+  - ALL
+  - UTR5
+  - CDS
+  - UTR3
+  data:
+  - name: CSR-1_IP
+  - name: CSR-1_IP_rha-1_MUT
+  fig_path: output/analyze/fig/
+  filter:
+  - name: WAGO-1_target
+  plot: true
+  title: 22G-RNA Scatter
+Start_Codon:
+  data:
+  - name: WAGO1_IP_WT
+  - name: WAGO1_IP_PRG1_MUT
+  fig_path: output/analyze/fig/
+  filter:
+  - name: WAGO-1_target
+  - name: CSR-1_target
+  plot: false
+  title: 22G-RNA Start-Codon Distribution
+Stop_Codon:
+  data:
+  - name: WAGO1_IP_WT
+  - name: WAGO1_IP_PRG1_MUT
+  fig_path: output/analyze/fig/
+  filter:
+  - name: WAGO-1_target
+  - name: CSR-1_target
+  plot: false
+  title: 22G-RNA Stop-Codon Distribution
+Tail:
+  data:
+  - name: WAGO1_IP_WT
+  - name: WAGO1_IP_PRG1_MUT
+  fig_path: output/analyze/fig/
+  filter:
+  - name: WAGO-1_target
+  - name: CSR-1_target
+  plot: false
+  title: 22G-RNA Tail Distribution

@@ -1,0 +1,13 @@
+This is cutadapt 2.9 with Python 3.5.2
+Command line parameters: --cores 4 -u 4 -u -4 -m 17 -
+Processing reads on 4 cores in single-end mode ...
+Finished in 9.90 s (3 us/read; 18.15 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:               2,992,922
+Reads with adapters:                         0 (0.0%)
+Reads written (passing filters):     1,991,501 (66.5%)
+
+Total basepairs processed:    70,718,026 bp
+Total written (filtered):     44,789,794 bp (63.3%)

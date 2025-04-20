@@ -1,0 +1,42 @@
+data:
+  - name: WAGO-1_IP
+    path: data/dataset/OG-02.csv
+    
+  - name: WAGO-1_IP_rha-1_MUT
+    path: data/dataset/OG-06.csv
+  
+  - name: CSR-1_IP
+    path: data/dataset/OG-10.csv
+    
+  - name: CSR-1_IP_rha-1_MUT
+    path: data/dataset/OG-14.csv
+
+  - name: OG-04
+    path: data/dataset/OG-04.csv
+
+  - name: OG-08
+    path: data/dataset/OG-08.csv
+
+  - name: OG-12
+    path: data/dataset/OG-12.csv
+
+  - name: OG-16
+    path: data/dataset/OG-16.csv
+
+  - name: OG-03
+    path: data/dataset/OG-03.csv
+  
+  - name: OG-07
+    path: data/dataset/OG-07.csv
+
+filter:
+  - name: WAGO-1_target
+    path: data/filter/WAGO-1_target
+  - name: CSR-1_target
+    path: data/filter/CSR-1_target
+  - name: Germline_target
+    path: data/filter/Germline_target
+  - name: Soma_target
+    path: data/filter/Soma_target
+  - name: PAR-6_target
+    path: data/filter/PAR-6_target

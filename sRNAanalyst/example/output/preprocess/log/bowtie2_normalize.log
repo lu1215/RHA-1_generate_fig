@@ -1,0 +1,21 @@
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LC_TIME = "en_DK.UTF-8",
+	LC_CTYPE = "UTF-8",
+	LANG = (unset)
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+Use of uninitialized value $bt2_args[4] in join or string at /home/ryan/bio_tool/bowtie2-2.4.1-linux-x86_64/bowtie2 line 423.
+Use of uninitialized value $bt2_args[5] in join or string at /home/ryan/bio_tool/bowtie2-2.4.1-linux-x86_64/bowtie2 line 423.
+Use of uninitialized value in exists at /home/ryan/bio_tool/bowtie2-2.4.1-linux-x86_64/bowtie2 line 81.
+Use of uninitialized value in exists at /home/ryan/bio_tool/bowtie2-2.4.1-linux-x86_64/bowtie2 line 81.
+Use of uninitialized value $bt2_args[4] in join or string at /home/ryan/bio_tool/bowtie2-2.4.1-linux-x86_64/bowtie2 line 459.
+Use of uninitialized value $bt2_args[5] in join or string at /home/ryan/bio_tool/bowtie2-2.4.1-linux-x86_64/bowtie2 line 459.
+930085 reads; of these:
+  930085 (100.00%) were unpaired; of these:
+    929868 (99.98%) aligned 0 times
+    212 (0.02%) aligned exactly 1 time
+    5 (0.00%) aligned >1 times
+0.02% overall alignment rate

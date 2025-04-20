@@ -1,0 +1,91 @@
+BASE_DIR: /media/disk1/shangyi/RHA-1_pipeline/sRNAanalyst/example
+Boundary:
+  columns:
+  - head
+  - tail
+  csv_path: output/analyze/boundary/
+  data:
+  - name: WAGO1_IP_WT
+  - name: WAGO1_IP_PRG1_MUT
+  limit:
+  - - 0
+    - 100
+  - - -100
+    - 0
+  reference:
+    path: data/mRNA_WS275_boundary.csv
+  run: false
+Codon:
+  columns:
+  - start codon
+  - stop codon
+  csv_path: output/analyze/codon/
+  data:
+  - name: WAGO1_IP_WT
+  - name: WAGO1_IP_PRG1_MUT
+  limit:
+  - - -100
+    - 100
+  - - -100
+    - 100
+  reference:
+    path: data/mRNA_WS275_boundary.csv
+  run: false
+Density:
+  columns:
+  - UTR5
+  - CDS
+  - UTR3
+  csv_path: output/analyze/region/
+  data:
+  - name: WAGO1_IP_WT
+  - name: WAGO1_IP_PRG1_MUT
+  reference:
+    path: data/mRNA_WS275_3region.csv
+  run: false
+Fold_Change:
+  columns:
+  - UTR5
+  - CDS
+  - UTR3
+  csv_path: output/analyze/region/
+  data:
+  - name: WAGO1_IP_WT
+  - name: WAGO1_IP_PRG1_MUT
+  reference:
+    path: data/mRNA_WS275_3region.csv
+  run: false
+Metagene:
+  csv_path: output/analyze/metagene/
+  data:
+  - name: CSR-1_IP
+  - name: CSR-1_IP_rha-1_MUT
+  reference:
+    path: data/mRNA_WS275_metagene.csv
+  run: false
+Position:
+  columns: null
+  csv_path: null
+  data: null
+  limit: null
+  reference: null
+  run: false
+Region:
+  columns: null
+  csv_path: null
+  data: null
+  reference: null
+  run: false
+Scatter:
+  columns:
+  - ALL
+  - UTR5
+  - CDS
+  - UTR3
+  csv_path: output/analyze/region/
+  data:
+  - name: CSR-1_IP
+  - name: CSR-1_IP_rha-1_MUT
+  reference:
+    path: data/mRNA_WS275_3region.csv
+  run: true
