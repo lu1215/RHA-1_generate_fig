@@ -52,9 +52,6 @@ Metagene:
 Scatter:
   columns:
   - ALL
-  - UTR5
-  - CDS
-  - UTR3
   data:
   - name: CSR-1_IP
   - name: CSR-1_IP_rha-1_MUT
