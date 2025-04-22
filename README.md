@@ -53,6 +53,8 @@ cd path-to-RHA-1_generate_fig/
 bash run_generate_fig.sh
 ```
 
+After executing bash `run_generate_fig.sh`, all figures from the paper will be saved in the `RHA-1_generate_fig/output/` directory.
+
 <!-- ---
 ## Working with `.fastq` Files
 If you have .fastq.gz files, please include the following samples in the input directory: 
