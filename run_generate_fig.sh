@@ -86,8 +86,10 @@ python code/run_scatter.py
 
 G22_og_files=("OG-04" "OG-08" "OG-12" "OG-16" "OG-03" "OG-07")
 
-for ((i=0; i<${#G22_og_files[@]}; i+=1)); do
-    python code/process_22G_bedgraph.py input/${G22_og_files[i]}.csv T26E3.3a.1 1410
+for ((i=0; i<${#G22_og_files[@]}; i+=2)); do
+    # og_file="${total_og_files[i]}"
+    echo "preprocessing input/${G22_og_files[i]}.csv and input/${G22_og_files[i+1]}.csv"
+    python code/process_22G_bedgraph.py input/${G22_og_files[i]}.csv input/${G22_og_files[i+1]}.csv T26E3.3a.1 1410
 done
 
 if [ $del_meta = 'True' ]; then

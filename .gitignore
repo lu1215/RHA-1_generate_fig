@@ -1,2 +1,5 @@
 input/*.csv
+input/miRNA_abu
+input/RPM
 output/*
+sRNAanalyst/example/data/dataset/*.csv

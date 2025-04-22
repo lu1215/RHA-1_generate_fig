@@ -1,3 +1,6 @@
+## Preprocessing
+
+
 ## Data Download
 
 Please download the required normalization data files from the following links:
@@ -55,7 +58,7 @@ bash run_generate_fig.sh
 
 After executing bash `run_generate_fig.sh`, all figures from the paper will be saved in the `RHA-1_generate_fig/output/` directory.
 
-<!-- ---
+---
 ## Working with `.fastq` Files
 If you have .fastq.gz files, please include the following samples in the input directory: 
 `OG-02, OG-06, OG-10, OG-14, OG-04, OG-08, OG-12, OG-16, OG-03, OG-07` `RHA-1_generate_fig/input/` 
@@ -66,7 +69,7 @@ Then, modify the `RHA-1_generate_fig/run_generate_fig.sh` script by changing:
 ```diff
 - preprocess=False
 + preprocess=True
-``` -->
+```
 
 ---
 ## Example Outputs
