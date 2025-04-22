@@ -37,10 +37,10 @@ pip install \
 
 ### System-Level Requirements
 Python version: `3.5.2`
-System package: cutadapt version `2.9`
+<!-- System package: cutadapt version `2.9`
 ```bash
 apt install cutadapt  
-```
+``` -->
 
 ---
 ## Executing Program
