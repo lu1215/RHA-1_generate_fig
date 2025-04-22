@@ -74,7 +74,7 @@ To regenerate them, run `bash run_generate_fig.sh` with appropriate input data.
 ![fig_g1](./example_output/fig_g1.png)
 ![fig_h](./example_output/fig_h.png)
 
-![OG-03_22G_non_overlap](./example_output/OG-03_22G_non_overlap.png)
+![OG-03_22G](./example_output/OG-03_22G.png)
 
 ---
 ## External Code Reference
