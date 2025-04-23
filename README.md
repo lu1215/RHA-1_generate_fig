@@ -1,5 +1,13 @@
-## Preprocessing
+## Data Preprocessing
+1. Use `cutadapt` to trim adapter sequences and discard reads containing ambiguous 'N' bases (`cutadapt --max-n 0 -a AGATCGGAAGAGCACACGTCT`)
+2. Collapse duplicate reads to reduce redundancy, calculate the read count for each unique read and output the result in FASTA format
+3. calculating normalization factor
+  - miRNA abundance: Calculate the read count of perfectly mapped reads to known miRNAs(using `bowtie2`), then normalize `normalization factor = (mapped_miRNA_read_count) / 10^6`
+  - RPM: Sum up the read counts of all collapsed reads, `normalization_factor = (total_read_count) / 10^6`
+4. Filter reads that start with a 'G', have a length of 22–23 nucleotides and map filtered reads to the mRNA reference using bowtie2 in perfect-match mode (`bowtie2 -a --score-min C,0,0 --norc --no-unal --no-hd`).
+5. output .csv file
 
+---
 
 ## Data Download
 
@@ -43,10 +51,19 @@ pip install \
 
 ### System-Level Requirements
 Python version: `3.5.2`
-<!-- System package: cutadapt version `2.9`
+System package: 
+- cutadapt version `2.9`
 ```bash
 apt install cutadapt  
-``` -->
+```
+- bowtie2 version `2.4.1`
+```bash
+wget https://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.5.3/bowtie2-2.5.3-linux-x86_64.zip/download -O Bowtie2.zip
+unzip -j Bowtie2.zip -d Bowtie2
+mv Bowtie2 sRNAanalyst/src/
+rm Bowtie2.zip
+export PATH=sRNAanalyst/src/Bowtie2:$PATH
+```
 
 ---
 ## Executing Program

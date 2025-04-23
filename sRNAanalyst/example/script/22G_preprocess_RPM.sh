@@ -13,6 +13,8 @@ task=${BASE_DIR}/../src/srna_preprocess.py
 # -------------------
 echo "step1. trim adapter"
 
+
+CPU_core=$(( $(nproc) - 2 ))
 cutadapt --cores ${CPU_core} --max-n 0 -a ${adapter} ${input} 2> ${log}/cutadapt_trim-adapter.log | \
 cutadapt --cores ${CPU_core} -u ${UMI} -u -${UMI} -m ${min_length} - > ${data}_trimmed.fq 2> ${log}/cutadapt_trim-UMI.log
 
@@ -56,7 +58,7 @@ bwt=${output}/bwt/mRNA_WS275
 # samtools view -h ${data}_mapped.sam | awk '$1 ~ /^@/ || and($2, 4) == 0' > ${data}_mapped_only.sam
 # grep -v '^@' ${data}_mapped_only.sam > ${data}_mapped.sam
 
-# bowtie2-build $ref $bwt --threads ${CPU_core} > ${log}/bowtie2-build.log 2>&1
+bowtie2-build $ref $bwt --threads ${CPU_core} > ${log}/bowtie2-build.log 2>&1
 # # default --score-min setting and filter mutation <= 2
 # # bowtie2 -a --norc --no-unal --no-hd -x $bwt -f ${data}_filtered.fa --threads ${CPU_core} -S ${data}_mapped_allow2.sam > ${log}/bowtie2.log 2>&1
 # # awk '/NM:i:[0-2]/' ${data}_mapped_allow2.sam > test_output_sam
