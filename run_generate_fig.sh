@@ -29,14 +29,14 @@ if [ $preprocess = 'True' ]; then
         og_file="${total_og_files[i]}"
         echo "preprocessing $og_file"
         cd sRNAanalyst/example/script/
-        echo input_file=../../../input/${og_file}.fastq.gz >> 22G_preprocess.conf
+        echo input_file=../../input/${og_file}.fastq.gz >> 22G_preprocess.conf
         echo base_name=${og_file} >> 22G_preprocess.conf
         if [ $norm_method = "RPM" ]; then
             bash 22G_preprocess_RPM.sh
         else
             bash 22G_preprocess.sh
         fi
-        mv ../output/${og_file}.csv ../../../input/
+        mv ../output/preprocess/${og_file}.csv ../../../input/
         cd -
     done
 fi

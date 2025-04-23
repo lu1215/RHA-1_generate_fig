@@ -46,25 +46,32 @@ pip install \
   tzlocal==2.1 \
   uwsgi==2.0.24 \
   cutadapt==3.7 \
-  PyYAML==5.3.1
+  PyYAML==5.3.1 \
+  tqdm==4.64.1
 ```
 
 ### System-Level Requirements
-- Python version: `3.5.2`
+- Python version: `3.6`
 - System package: 
-    - cutadapt version `2.9`
+    <!-- - cutadapt version `2.9`
     ```bash
     apt install cutadapt  
-    ```
-    - bowtie2 version `2.4.1`
+    ``` -->
+    - bowtie2 version `2.5.3`
     ```bash
     wget https://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.5.3/bowtie2-2.5.3-linux-x86_64.zip/download -O Bowtie2.zip
     unzip -j Bowtie2.zip -d Bowtie2
     mv Bowtie2 sRNAanalyst/src/
     rm Bowtie2.zip
+    ```
+    add the line below to 
+    ```bash
     export PATH=sRNAanalyst/src/Bowtie2:$PATH
     ```
-
+    - other package
+    ```bash
+    apt install -y libbz2-dev liblzma-dev libcurl4-openssl-dev libssl-dev libncurses5-dev build-essential
+    ```
 ---
 ## Executing Program
 After building the virtual environment, and put csv files in `RHA-1_generate_fig/input/`
