@@ -59,15 +59,16 @@ pip install \
     ``` -->
     - bowtie2 version `2.5.3`
     ```bash
+    cd path-to-RHA-1_pipeline/
     wget https://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.5.3/bowtie2-2.5.3-linux-x86_64.zip/download -O Bowtie2.zip
     unzip -j Bowtie2.zip -d Bowtie2
     mv Bowtie2 sRNAanalyst/src/
     rm Bowtie2.zip
     ```
-    add the line below to 
+    <!-- add the line below to 
     ```bash
     export PATH=sRNAanalyst/src/Bowtie2:$PATH
-    ```
+    ``` -->
     - other package
     ```bash
     apt install -y libbz2-dev liblzma-dev libcurl4-openssl-dev libssl-dev libncurses5-dev build-essential

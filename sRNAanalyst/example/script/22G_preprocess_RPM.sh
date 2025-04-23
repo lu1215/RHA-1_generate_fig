@@ -58,13 +58,13 @@ bwt=${output}/bwt/mRNA_WS275
 # samtools view -h ${data}_mapped.sam | awk '$1 ~ /^@/ || and($2, 4) == 0' > ${data}_mapped_only.sam
 # grep -v '^@' ${data}_mapped_only.sam > ${data}_mapped.sam
 
-bowtie2-build $ref $bwt --threads ${CPU_core} > ${log}/bowtie2-build.log 2>&1
+../../src/Bowtie2/bowtie2-build $ref $bwt --threads ${CPU_core} > ${log}/bowtie2-build.log 2>&1
 # # default --score-min setting and filter mutation <= 2
 # # bowtie2 -a --norc --no-unal --no-hd -x $bwt -f ${data}_filtered.fa --threads ${CPU_core} -S ${data}_mapped_allow2.sam > ${log}/bowtie2.log 2>&1
 # # awk '/NM:i:[0-2]/' ${data}_mapped_allow2.sam > test_output_sam
 
 # # original filter setting (perfect match)
-bowtie2 -x $bwt -f ${data}_filtered.fa -S ${data}_mapped.sam --threads ${CPU_core} ${bowtie} > ${log}/bowtie2.log 2>&1
+../../src/Bowtie2/bowtie2 -x $bwt -f ${data}_filtered.fa -S ${data}_mapped.sam --threads ${CPU_core} ${bowtie} > ${log}/bowtie2.log 2>&1
 python $task --distribute -i ${data}_mapped.sam 2> ${log}/map.log | \
 python $task --normalize $norm_factor -o ${data}.csv >> ${log}/map.log
 
