@@ -50,13 +50,13 @@ pip install \
 ```
 
 ### System-Level Requirements
-Python version: `3.5.2`
-System package: 
-- cutadapt version `2.9`
+- Python version: `3.5.2`
+- System package: 
+    - cutadapt version `2.9`
 ```bash
 apt install cutadapt  
 ```
-- bowtie2 version `2.4.1`
+    - bowtie2 version `2.4.1`
 ```bash
 wget https://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.5.3/bowtie2-2.5.3-linux-x86_64.zip/download -O Bowtie2.zip
 unzip -j Bowtie2.zip -d Bowtie2
