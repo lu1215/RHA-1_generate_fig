@@ -44,7 +44,6 @@ pip install \
   statannotations==0.6.0 \
   rpy2==3.0.5 \
   tzlocal==2.1 \
-  uwsgi==2.0.24 \
   cutadapt==3.7 \
   PyYAML==5.3.1 \
   tqdm==4.64.1
@@ -71,7 +70,7 @@ pip install \
     ``` -->
     - other package
     ```bash
-    apt install -y libbz2-dev liblzma-dev libcurl4-openssl-dev libssl-dev libncurses5-dev build-essential
+    apt install -y libbz2-dev liblzma-dev libcurl4-openssl-dev libssl-dev libncurses5-dev build-essential unzip
     ```
 ---
 ## Executing Program
