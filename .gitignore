@@ -2,4 +2,5 @@ input/*.csv
 input/miRNA_abu
 input/RPM
 output/*
+!output/.gitkeep
 sRNAanalyst/example/data/dataset/*.csv
