@@ -115,7 +115,7 @@ To regenerate them, run `bash run_generate_fig.sh` with appropriate input data.
 ![fig_f2](./example_output/fig_f2.png)
 
 - The bottom plot in this image(`fig_g.png`) represents Figure G in the paper.
-![fig_f](./example_output/fig_f.png)
+![fig_g](./example_output/fig_g.png)
 
 - The bottom plot in this image(`fig_h.png`) represents Figure H in the paper.
 ![fig_h](./example_output/fig_h.png)
