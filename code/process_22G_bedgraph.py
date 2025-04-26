@@ -201,6 +201,7 @@ def plot_coverage(coverage, transcript_length, transcript_name, csv_file, y_max)
     plt.tight_layout()
 
     output_filename = "output/{}_22G.png".format(os.path.basename(csv_file).replace(".csv", ''))
+    # output_filename = "output/{}_22G.svg".format(os.path.basename(csv_file).replace(".csv", ''))
     plt.savefig(output_filename)
     print("save graph to:", output_filename)
     plt.show()

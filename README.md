@@ -110,14 +110,14 @@ To regenerate them, run `bash run_generate_fig.sh` with appropriate input data.
 ![fig_e1](./example_output/fig_e1.png)
 ![fig_e2](./example_output/fig_e2.png)
 
-- The middle plot in this image(`fig_f.png`) represents Figure F in the paper.
+- The upper image(`fig_f1.png`) corresponds to the left scatter plot of Figure F, and the bottom image(`fig_f2.png`) corresponds to the right scatter plot of Figure F.
+![fig_f1](./example_output/fig_f1.png)
+![fig_f2](./example_output/fig_f2.png)
+
+- The bottom plot in this image(`fig_g.png`) represents Figure G in the paper.
 ![fig_f](./example_output/fig_f.png)
 
-- The upper image(`fig_g1.png`) corresponds to the left scatter plot of Figure G, and the bottom image(`fig_g2.png`) corresponds to the right scatter plot of Figure G.
-![fig_g1](./example_output/fig_g1.png)
-![fig_g2](./example_output/fig_g2.png)
-
-- The middle plot in this image(`fig_h.png`) represents Figure H in the paper.
+- The bottom plot in this image(`fig_h.png`) represents Figure H in the paper.
 ![fig_h](./example_output/fig_h.png)
 
 - This is the bedGraph(`OG-03_22G.png`) of OG-03. After running `run_generate_fig.sh`, bedGraph files for OG-03, OG-04, OG-07, OG-08, OG-12, and OG-16 are generated and saved in the `output` folder.
@@ -132,3 +132,42 @@ Only selected scripts or modules have been retained under `RHA-1_generate_fig/sR
 
 > Original repository: https://github.com/RyanCCJ/sRNAanalyst  
 > License: MIT License – original license and attribution have been preserved where applicable.
+
+<!-- ## Svg/Png mode transfer
+for example png -> svg mode
+- `run_generate_fig.sh`
+```diff
+- mv output/analyze/fig/Metagene_0.png ../../output/fig_h.png
++ mv output/analyze/fig/Metagene_0.svg ../../output/fig_h.svg
+```
+```diff
+- mv output/analyze/fig/Metagene_0.png ../../output/fig_g.png
++ mv output/analyze/fig/Metagene_0.svg ../../output/fig_g.svg
+```
+- `sRNAanalyst/example/config/stylesheet.yml`
+```diff
+- fig_format: png
++ fig_format: svg
+```
+- `code/process_22G_bedgraph.py`
+```diff
+- output_filename = "output/{}_22G.png".format(os.path.basename(csv_file).replace(".csv", ''))
++ output_filename = "output/{}_22G.svg".format(os.path.basename(csv_file).replace(".csv", ''))
+```
+- `code/run_scatter.py`
+```diff
+- os.system("mv output/analyze/fig/Scatter_0.png ../../output/fig_f1.png")
++ os.system("mv output/analyze/fig/Scatter_0.svg ../../output/fig_f1.svg")
+```
+```diff
+- os.system("mv output/analyze/fig/Scatter_0.png ../../output/fig_e1.png")
++ os.system("mv output/analyze/fig/Scatter_0.svg ../../output/fig_e1.svg")
+```
+```diff
+- os.system("mv output/analyze/fig/Scatter_0.png ../../output/fig_f2.png")
++ os.system("mv output/analyze/fig/Scatter_0.svg ../../output/fig_f2.svg")
+```
+```diff
+- os.system("mv output/analyze/fig/Scatter_0.png ../../output/fig_e2.png")
++ os.system("mv output/analyze/fig/Scatter_0.svg ../../output/fig_e2.svg")
+``` -->

@@ -76,3 +76,14 @@ else:
     })
 
 update_yaml("sRNAanalyst/example/config/plot_config.yml", plot_config_updates)
+
+## change stylesheet.yml
+# if i == 0:
+# original 
+# style: darkgrid
+# color: coolwarm
+stylesheet_updates = {
+    "General.style": "whitegrid",
+    # "General.color": "coolwarm"
+}
+update_yaml("sRNAanalyst/example/config/stylesheet.yml", stylesheet_updates)

@@ -32,8 +32,13 @@ def update_yaml(path, updates):
 scatter_groups = ["OG-02", "OG-06", "OG-10", "OG-14"]
 run_config_path = "sRNAanalyst/example/config/run_config.yml"
 plot_config_path = "sRNAanalyst/example/config/plot_config.yml"
+stylesheet_path = "sRNAanalyst/example/config/stylesheet.yml"
 cwd = os.getcwd()
 print(cwd)
+
+style_updates = {}
+style_updates["General.style"] = "white"
+update_yaml(stylesheet_path, style_updates)
 
 for i in range(0, len(scatter_groups), 2):
     og1 = scatter_groups[i]
@@ -78,9 +83,11 @@ for i in range(0, len(scatter_groups), 2):
 
     os.system("sh script/22G_analyze.sh")
     if i == 0:
-        os.system("mv output/analyze/fig/Scatter_0.png ../../output/fig_g1.png")
+        os.system("mv output/analyze/fig/Scatter_0.png ../../output/fig_f1.png")
+        # os.system("mv output/analyze/fig/Scatter_0.svg ../../output/fig_f1.svg")
     else:
         os.system("mv output/analyze/fig/Scatter_0.png ../../output/fig_e1.png")
+        # os.system("mv output/analyze/fig/Scatter_0.svg ../../output/fig_e1.svg")
 
     os.chdir(cwd)
     # 第二次分析（WAGO-1_target）
@@ -90,8 +97,10 @@ for i in range(0, len(scatter_groups), 2):
     os.chdir("sRNAanalyst/example")
     os.system("sh script/22G_analyze.sh")
     if i == 0:
-        os.system("mv output/analyze/fig/Scatter_0.png ../../output/fig_g2.png")
+        os.system("mv output/analyze/fig/Scatter_0.png ../../output/fig_f2.png")
+        # os.system("mv output/analyze/fig/Scatter_0.svg ../../output/fig_f2.svg")
     else:
         os.system("mv output/analyze/fig/Scatter_0.png ../../output/fig_e2.png")
+        # os.system("mv output/analyze/fig/Scatter_0.svg ../../output/fig_e2.svg")
 
     os.chdir(cwd)

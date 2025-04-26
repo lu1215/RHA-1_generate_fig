@@ -549,16 +549,23 @@ def line_plot(
             plot_df = pd.concat([plot_df,df])
     plot_df = plot_df.reset_index(drop=True)
 
+    name = plot_df[hue].drop_duplicates().to_list()
+    if len(name) == 2:
+        # only two data
+        palette = ['blue', 'red']
+    else:
+        # more than two data using sns.color_palette
+        palette = sns.color_palette(color, len(name)).as_hex()
     # plot figure
     sns.set(style=style)
     fig, (ax1, ax2, ax3) = plt.subplots(3, 1, sharex=True, figsize=(7,12), dpi=200)
-    ax1 = sns.lineplot(ax=ax1, data=plot_df, x='index', y='ratio', hue=hue, style=hue2, palette=color, ci=None)
-    ax2 = sns.lineplot(ax=ax2, data=plot_df, x='index', y='avg', hue=hue, style=hue2, palette=color, ci=None)
-    ax3 = sns.lineplot(ax=ax3, data=plot_df, x='index', y='avg_dis', hue=hue, style=hue2, palette=color, ci=None)
+    ax1 = sns.lineplot(ax=ax1, data=plot_df, x='index', y='ratio', hue=hue, style=hue2, palette=palette, ci=None)
+    ax2 = sns.lineplot(ax=ax2, data=plot_df, x='index', y='avg', hue=hue, style=hue2, palette=palette, ci=None)
+    ax3 = sns.lineplot(ax=ax3, data=plot_df, x='index', y='avg_dis', hue=hue, style=hue2, palette=palette, ci=None)
     
     # fill colors between (+/- 1STE)
-    name = plot_df[hue].drop_duplicates().to_list()
-    palette = sns.color_palette(color,len(name)).as_hex()
+    
+    # palette = sns.color_palette(color,len(name)).as_hex()
     for i in range(int(len(plot_df)/columns_num)):
         start = i*columns_num
         end = (i+1)*columns_num
@@ -712,11 +719,20 @@ def scatter_plot(
     # plot figure
     sns.set(style=style)
     ax_num = 1 if condition==1 else len(columns)
+    # print("ax_num: ", ax_num)
+    # # setting colors
+    # if ax_num == 2:
+    #     # only two data
+    #     palette = ['blue', 'black']
+    # else:
+    #     # more than two data using sns.color_palette
+    #     palette = color
+    palette = ['gray', 'black']
     fig = plt.figure(figsize=(1+5*ax_num, 5), dpi=200)
     for i in range(ax_num):
         sub_df = plot_df if condition==1 else plot_df[ plot_df['region']==orignal_columns[i] ]
         ax = fig.add_subplot(1,ax_num,i+1)
-        ax = sns.scatterplot(data=sub_df, x='x', y='y', hue=hue, style=hue2, palette=color, linewidth=0.3, s=10)
+        ax = sns.scatterplot(data=sub_df, x='x', y='y', hue=hue, style=hue2, palette=palette, linewidth=0.3, s=10)
 
         # add base line
         diag_x = list(ax.get_xlim())

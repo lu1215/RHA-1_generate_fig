@@ -65,8 +65,10 @@ for ((i=0; i<${#metagene_groups[@]}; i+=2)); do
     # 移動輸出圖片
     if [ "$i" -eq 0 ]; then
         mv output/analyze/fig/Metagene_0.png ../../output/fig_h.png
+        # mv output/analyze/fig/Metagene_0.svg ../../output/fig_h.svg
     else
-        mv output/analyze/fig/Metagene_0.png ../../output/fig_f.png
+        mv output/analyze/fig/Metagene_0.png ../../output/fig_g.png
+        # mv output/analyze/fig/Metagene_0.svg ../../output/fig_g.svg
     fi
 
     cd - || exit 1
