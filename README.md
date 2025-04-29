@@ -73,14 +73,6 @@ pip install \
     apt install -y libbz2-dev liblzma-dev libcurl4-openssl-dev libssl-dev libncurses5-dev build-essential unzip
     ```
 ---
-## Executing Program
-After building the virtual environment, and put csv files in `RHA-1_generate_fig/input/`
-```bash
-cd path-to-RHA-1_generate_fig/
-bash run_generate_fig.sh
-```
-
-After executing bash `run_generate_fig.sh`, all figures from the paper will be saved in the `RHA-1_generate_fig/output/` directory.
 
 ---
 ## Working with `.fastq` Files
@@ -100,6 +92,15 @@ Users can customize the normalization method by modifying the following line in 
 # [ "RPM" / "miRNA_abu" ]
 norm_method="RPM"
 ```
+
+## Executing Program
+After building the virtual environment, and put csv files in `RHA-1_generate_fig/input/`
+```bash
+cd path-to-RHA-1_generate_fig/
+bash run_generate_fig.sh
+```
+
+After executing bash `run_generate_fig.sh`, all figures from the paper will be saved in the `RHA-1_generate_fig/output/` directory.
 
 ---
 ## Example Outputs
